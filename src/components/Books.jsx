@@ -30,7 +30,7 @@ function Books({ searchTerm }) {
 
   return (
     <>
-      <h1>Book List</h1>
+      <h2>Book List</h2>
       {filteredBooks.length === 0 ? (
         <p>No books found</p>
       ) : (
