@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import List from "./List";
 
-function Books({ searchTerm }) {
+function Books({ searchTerm, onFavourite }) {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -31,18 +32,16 @@ function Books({ searchTerm }) {
   return (
     <>
       <h2>Book List</h2>
-      {filteredBooks.length === 0 ? (
-        <p>No books found</p>
-      ) : (
-        <ul>
-          {filteredBooks.map((book, index) => (
-            <li key={index}>
-              <strong>{book.title}</strong> by {book.author}{" "}
-              {book.publication_year}
-            </li>
-          ))}
-        </ul>
-      )}
+
+      <List
+        items={filteredBooks}
+        renderItem={(book) => (
+          <div>
+            <strong>{book.title}</strong> by {book.author}
+            <button onClick={() => onFavourite(book)}>Add to favourite</button>
+          </div>
+        )}
+      />
     </>
   );
 }
