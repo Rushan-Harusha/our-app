@@ -1,18 +1,18 @@
-import './App.css'
-import SearchBox from './components/SearchBox'
-import Books from './components/Books'
-import { useState } from 'react'
+import "./App.css";
+import SearchBox from "./components/SearchBox";
+import Books from "./components/Books";
+import { useState } from "react";
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <>      
-      <h1>App Component</h1> 
-      <SearchBox searchTerm = {searchTerm} setSearchTerm = {setSearchTerm}/>   
-      <Books searchTerm ={searchTerm}/>  
+    <>
+      <h1>Book Finder</h1>
+      <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <Books searchTerm={searchTerm} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
