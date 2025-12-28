@@ -1,16 +1,113 @@
-# React + Vite
+# 📚 Book Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Book Finder is a simple React application built using **Vite + React**.  
+It allows users to search for books, add them to a favourites list, and remove them from favourites.
 
-Currently, two official plugins are available:
+This project was developed as part of a **tutorial** to practice component-based design, state management, and reusable components in React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔍 Search books by title
+- 📖 Display a list of books loaded from a JSON file
+- ❤️ Add books to a favourites list
+- ❌ Remove books from favourites
+- ♻️ Reusable `List` component for rendering collections
+- 📱 Responsive and clean UI layout
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- React (with Hooks)
+- Vite
+- JavaScript (ES6+)
+- CSS
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├─ components/
+ │   ├─ Books.jsx
+ │   ├─ FavouriteBooks.jsx
+ │   ├─ List.jsx
+ │   ├─ SearchBox.jsx
+ ├─ App.jsx
+ ├─ main.jsx
+ ├─ index.css
+ ├─ App.css
+public/
+ ├─ books.json
+ ├─ book.svg
+```
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the development server
+
+```bash
+npm run dev
+```
+
+The app will be available at:
+
+```
+http://localhost:5173/our-app/
+```
+
+---
+
+## 🌍 Deployment
+
+This project is deployed using **GitHub Pages**.
+
+To deploy updates:
+
+```bash
+npm run build
+npm run deploy
+```
+
+Make sure the `base` option in `vite.config.js` matches your GitHub repository name.
+
+---
+
+## 🧠 Learning Outcomes
+
+- Understanding React state lifting and prop passing
+- Creating reusable components
+- Handling conditional rendering
+- Managing lists and user interactions
+- Deploying a Vite + React app to GitHub Pages
+
+---
+
+## 📌 Notes
+
+- This project is intended for **learning and tutorial purposes**
+- Styling is intentionally kept simple and readable
+
+---
+
+## 👤 Author
+
+**Rushan Harusha Weerakkody**
