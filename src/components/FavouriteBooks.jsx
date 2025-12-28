@@ -8,10 +8,18 @@ function FavouriteBooks({ favouriteBooks, removeFavourite }) {
         items={favouriteBooks}
         emptyMessage="You have no favourite books yet"
         renderItem={(book) => (
-          <>
-            <strong>{book.title}</strong>
-            <button onClick={() => removeFavourite(book)}>Remove</button>
-          </>
+          <div className="row">
+            <div className="rowText">
+              <strong>{book.title}</strong>
+            </div>
+
+            <button
+              className="btn btnDanger"
+              onClick={() => removeFavourite(book)}
+            >
+              Remove
+            </button>
+          </div>
         )}
       />
     </>

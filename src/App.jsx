@@ -19,15 +19,25 @@ function App() {
   };
 
   return (
-    <>
-      <h1>Book Finder</h1>
-      <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <Books searchTerm={searchTerm} onFavourite={addFavourite} />
-      <FavouriteBooks
-        favouriteBooks={favouriteBooks}
-        removeFavourite={removeFavourite}
-      />
-    </>
+    <div className="app">
+      <header className="header">
+        <h1>Book Finder</h1>
+        <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      </header>
+
+      <main className="grid">
+        <section className="panel">
+          <Books searchTerm={searchTerm} onFavourite={addFavourite} />
+        </section>
+
+        <section className="panel">
+          <FavouriteBooks
+            favouriteBooks={favouriteBooks}
+            removeFavourite={removeFavourite}
+          />
+        </section>
+      </main>
+    </div>
   );
 }
 

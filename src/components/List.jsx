@@ -1,10 +1,12 @@
 function List({ items, renderItem, emptyMessage = "No items found" }) {
-  if (!items.length) return <p>{emptyMessage}</p>;
+  if (!items.length) return <p className="empty">{emptyMessage}</p>;
 
   return (
-    <ul>
+    <ul className="list">
       {items.map((item, index) => (
-        <li key={index}>{renderItem(item)}</li>
+        <li className="listItem" key={index}>
+          {renderItem(item)}
+        </li>
       ))}
     </ul>
   );

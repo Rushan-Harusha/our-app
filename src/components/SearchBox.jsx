@@ -1,14 +1,13 @@
-function SearchBox({searchTerm, setSearchTerm}) {
-
+function SearchBox({ searchTerm, setSearchTerm }) {
   return (
-    <>      
-      <input type="text" 
-      placeholder='Search books ..'
-      value={searchTerm} // controlled input
+    <input
+      className="search"
+      type="text"
+      placeholder="Search books..."
+      value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
-      />
-    </>
-  )
+    />
+  );
 }
 
-export default SearchBox
+export default SearchBox;

@@ -36,9 +36,15 @@ function Books({ searchTerm, onFavourite }) {
       <List
         items={filteredBooks}
         renderItem={(book) => (
-          <div>
-            <strong>{book.title}</strong> by {book.author}
-            <button onClick={() => onFavourite(book)}>Add to favourite</button>
+          <div className="row">
+            <div className="rowText">
+              <strong>{book.title}</strong>
+              <span className="muted"> by {book.author}</span>
+            </div>
+
+            <button className="btn" onClick={() => onFavourite(book)}>
+              Add to favourite
+            </button>
           </div>
         )}
       />

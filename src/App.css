@@ -1,42 +1,108 @@
-#root {
-  max-width: 1280px;
+/* Page container */
+.app {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem 1rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header area */
+.header {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Search input */
+.search {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+}
+
+/* 2-column layout */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
+}
+
+/* Card/panel */
+.panel {
+  background: white;
+  border: 1px solid #e6e8ef;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+/* List styling */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.listItem {
+  padding: 0.9rem;
+  border: 1px solid #eef0f6;
+  border-radius: 12px;
+  background: #fbfcff;
+}
+
+/* Row layout in each list item */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.rowText {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.muted {
+  color: #667085;
+  font-weight: 400;
+}
+
+/* Buttons */
+.btn {
+  border: 1px solid #cfd4dc;
+  background: white;
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  border-color: #98a2b3;
+}
+
+.btnDanger {
+  border-color: #fda29b;
+  background: #fff1f0;
+}
+
+.btnDanger:hover {
+  border-color: #f97066;
+}
+
+/* Empty message */
+.empty {
+  color: #667085;
+  margin: 0.5rem 0 0;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
